@@ -1,59 +1,54 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
     color: 	hsl(314, 6%, 41%);
-    margin-bottom: 24px;
 }
 
-/*Header*/
+html, body {
+    margin: 0;
+    padding:0;
+   
+}
 
-.header  {
+/*Navigation*/
+
+nav {
+    height: 80px;
+    position: fixed;    
+    width: 100%;
+    color: 	hsl(314, 6%, 41%);
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    vertical-align: baseline;
-    margin: 12px 24px;
-    
+    align-items: center;
+    background-color: white;
 }
 
-.header img {
-    height: 40px;
-    width: 50px;
+.logo img {
+    height: 50px;
+    margin: 10px 0;
+    margin-left: 30px;
+    padding-right: 5px;
+    align-self: center;
 }
 
-#logo {
+.logo {
     display: inline-flex;
-    vertical-align: baseline;
 }
 
-h1 {
-    margin: auto;
-    padding: 7px 0;
-    
+.logo h1 {
+    align-self: center;
+    font-size: 2rem;
 }
 
-ul {
-    display: inline-flex;
-    list-style: none;
-    font-size: 25px;
-    
-
+nav .links {
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
 }
 
-li {
-    padding: 0 30px;
-    margin-right: 78px;
-}
-
-li a {
-    text-decoration: none;
-    position: absolute;
+.links a {
+    font-size: 1.5rem;
+    margin: 15px;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
@@ -61,123 +56,146 @@ li a {
     color: 	hsl(314, 6%, 41%);
 }
 
-li a:hover {
-    color: rgb(148, 0, 74);;
-    font-size: 30px;
+.small-navbar { 
+   display: none;
+       
+    }
+
+
+@media only screen and (max-width: 768px) {
+ 
+    .links a {
+        display: none;
+    }
+
+    .small-navbar { 
+        width: 40px;
+        height: auto;
+        display: block;
+        margin-right: 30px;
+    }
 }
 
 /*Main*/
 
-.main  {
-    display: flex;
-    background-image: url(images/heather-barnes-WbZesfqwR-A-unsplash1.jpg);
-    height: 670px;
-    background-size: 100% auto;
+.main {
+    background-image: url("images/main-pic.jpg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 40px;
  }
 
  .main h2  {
-    padding-top: 30px;
-    height: auto;
+    align-self: baseline;
     width: 100%;
-    font-size: 35px;
+    font-size: 2rem;
     color: rgb(148, 0, 74);
 }
 
 /*Menu*/
 
-.menu   {
-    margin: 50px  24px;
+.menu {
     display: flex;
-    width:100%;
-    height: auto;
- }
-
-.menu h2  {
-   font-size: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 0 100px;
 }
 
-.menu img {
-    width: 90%;
-    height: 250px;
-    border-radius: 10px;
- }
 
- .menu-item {
+#menu {
+    font-size: 2rem;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 30px;
-    padding: 0 10px;
- }
+    letter-spacing: 1rem;
+}
 
- .menu-item {
+.menu-item {
+    margin-left: 30px;
+}
+
+.menu-item img {
+    width: 400px;
+    height: 300px;
+}
+
+.menu-item h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 30px;
-    padding: 0 10px;
- }
+}
 
- .menu a {
-    text-decoration: none;
- }
-
- .menu a:hover {
-    background-color: rgb(200, 221, 214);
- }
 
 /*Team*/
 
- .team  {
+.team-container {
+    background-color: rgb(247, 247, 247);
+ }
+
+.team  {
     display: flex;
-   justify-content: center;
+    justify-content: center;
     border-bottom: 1px  rgb(148, 0, 74) solid;
+    flex-wrap: wrap;
  }
 
-
- .team img {
-    width: 300px;
-    height: 370px;
-    padding-left: 40px;
-    opacity: 0.9;
- }
-
- #team {
+.team-container h2 {
     text-align: center;
-    font-size: 40px;
-    padding:  10px;
-    padding-bottom: 20px;
+    font-size: 2.5rem;
+    padding:  30px;
     border-top: 1px  rgb(148, 0, 74) solid;
+    letter-spacing: 0.5rem;
  }
 
- .team p {
+.team img {
+    height: 500px;
+    width: 350px;
+ }
+
+.team-member {
+    margin: 15px;
+ }
+
+.name {
+    font-size: 2rem;
     text-align: center;
-    font-size: 30px;
-    margin-bottom: 10px;
  }
 
- 
- .team-container {
-   background-color: rgb(231, 226, 226);
+ .position  {
+    font-size: 1.5rem;
  }
 
 /*Footer*/
 
-.footer {
-    padding-top: 50px;
-    height: 70px;
-    font-size: 30px;
+ .footer {
+    padding-top: 20px;
+    height: 50px;
     display: flex;
-    justify-content: space-between;
-    margin: 0 24px;
+    justify-content: center;
+    margin: 10px 30px;
+    flex-wrap: wrap;
  }
+
+ .footer p {
+   font-size: 1.5rem;
+   margin: 10px 50px;
+ } 
 
  .footer a {
     text-decoration: none;
     color: 	hsl(314, 6%, 41%);
+    font-size: 1.5rem;
  }
-   
-   
- 
+
+
+
+
 
 
 
