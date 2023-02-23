@@ -48,18 +48,24 @@ nav .links {
 
 .links a {
     font-size: 1.5rem;
-    margin: 15px;
+    margin: 20px;
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
     text-decoration-color: hsl(314, 6%, 41%);
     color: 	hsl(314, 6%, 41%);
+
+}
+
+.links a:hover {
+    transform: scale(1.3);
+    
 }
 
 .small-navbar { 
    display: none;
-       
-    }
+   
+}
 
 
 @media only screen and (max-width: 768px) {
