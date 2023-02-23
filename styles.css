@@ -125,9 +125,17 @@ nav .links {
     margin-left: 30px;
 }
 
+.menu-item:hover {
+   background-color: rgba(148, 0, 74, 0.1);
+  height: 370px;
+  border-radius: 15px;
+}
+
+
 .menu-item img {
     width: 400px;
     height: 300px;
+    border-radius: 15px;
 }
 
 .menu-item h3 {
